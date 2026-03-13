@@ -1,0 +1,1 @@
+{'Technology': 644, 'Agriculture': 458, 'Finance': 862, 'Retail': 618, 'Healthcare': 590, 'Education': 684, 'Consulting': 394, 'Manufacturing': 611, 'Logistics': 582}
