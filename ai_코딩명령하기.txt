@@ -222,5 +222,6 @@ revenue_growth_percent: AI 도입과 연계된 매출 성장률
 
 lightbgm_train1.py
 여기에
-결측치 규모 파악 및 revenue_growth_percent Boxplot 확인
+
+변수 제거: company_founding_year, response_id, company_id 등 예측에 불필요한 ID 및 중복 변수 삭제
 이걸 적용해줘(필요할시)
