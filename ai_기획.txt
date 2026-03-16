@@ -402,3 +402,6 @@ EDA: 결측치 규모 파악 및 revenue_growth_percent Boxplot 확인
 
 모델 학습: LGBMRegressor 객체를 생성하여 학습 (분류기인 LGBMClassifier가 아님에 주의)
 -- 기획자 ai 답변 끝--
+
+
+
