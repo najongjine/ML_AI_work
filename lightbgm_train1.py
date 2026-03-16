@@ -32,9 +32,21 @@ plt.savefig('plots/revenue_growth_boxplot.png')
 print("\nBoxplot saved to 'plots/revenue_growth_boxplot.png'")
 
 # 4. Data Preprocessing
-# Drop non-predictive ID columns
-drop_cols = ['response_id', 'company_id']
+# Drop non-predictive ID columns and redundant features
+drop_cols = ['response_id', 'company_id', 'company_founding_year']
 df = df.drop(columns=drop_cols)
+
+# Handle Outliers in target variable (revenue_growth_percent) using IQR
+Q1 = df['revenue_growth_percent'].quantile(0.25)
+Q3 = df['revenue_growth_percent'].quantile(0.75)
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+print(f"\n--- Outlier Handling ---")
+print(f"Original target range: {df['revenue_growth_percent'].min():.2f} to {df['revenue_growth_percent'].max():.2f}")
+df['revenue_growth_percent'] = df['revenue_growth_percent'].clip(lower=lower_bound, upper=upper_bound)
+print(f"Capped target range: {df['revenue_growth_percent'].min():.2f} to {df['revenue_growth_percent'].max():.2f}")
 
 # Identify categorical and numerical columns
 cat_cols = df.select_dtypes(include=['object']).columns.tolist()
