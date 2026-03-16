@@ -1,0 +1,37 @@
+Global AI Use Case Distribution
+==============================
+                           Count  Percentage (%)
+ai_use_case                                     
+Customer Support           37683       25.122000
+HR Automation              30184       20.122667
+Marketing Automation       21130       14.086667
+Predictive Maintenance     16161       10.774000
+Supply Chain Optimization  15560       10.373333
+Fraud Detection            12426        8.284000
+Software Development       12294        8.196000
+Medical Diagnostics         4562        3.041333
+
+Top AI Use Cases by Industry
+============================
+     Industry                                                                          Top 3 Use Cases
+  Agriculture             Customer Support (3921), Predictive Maintenance (3905), HR Automation (3889)
+   Consulting               HR Automation (3198), Software Development (3148), Customer Support (3141)
+    Education        Customer Support (3865), Software Development (3858), Marketing Automation (3805)
+      Finance             Marketing Automation (5090), Fraud Detection (5085), Customer Support (5034)
+   Healthcare             HR Automation (4756), Customer Support (4706), Predictive Maintenance (4618)
+    Logistics Supply Chain Optimization (3263), Predictive Maintenance (3247), Customer Support (3241)
+Manufacturing             HR Automation (4398), Predictive Maintenance (4391), Customer Support (4365)
+       Retail        Fraud Detection (4131), Customer Support (4130), Supply Chain Optimization (4095)
+   Technology               HR Automation (5342), Software Development (5288), Customer Support (5280)
+
+Average Productivity Increase by Use Case
+=========================================
+ai_use_case
+Software Development         9.787548
+Marketing Automation         9.523283
+HR Automation                9.315241
+Fraud Detection              9.284419
+Customer Support             9.272245
+Supply Chain Optimization    9.042692
+Predictive Maintenance       8.824060
+Medical Diagnostics          8.601263

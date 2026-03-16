@@ -1,0 +1,23 @@
+Global AI Primary Tool Distribution
+==================================
+                    Count  Percentage (%)
+ai_primary_tool                          
+ChatGPT             46103       30.735333
+Claude              24562       16.374667
+Custom Internal AI  24300       16.200000
+Gemini              23996       15.997333
+GitHub Copilot      20377       13.584667
+Other               10662        7.108000
+
+Top AI Tools by Industry
+========================
+     Industry                                              Top 3 Tools
+  Agriculture ChatGPT (4956), Gemini (2505), Custom Internal AI (2497)
+   Consulting             ChatGPT (4041), Claude (2029), Gemini (1943)
+    Education ChatGPT (4951), Custom Internal AI (2400), Claude (2398)
+      Finance ChatGPT (5266), Claude (4017), Custom Internal AI (4007)
+   Healthcare             ChatGPT (6015), Gemini (3039), Claude (3022)
+    Logistics ChatGPT (4116), Claude (2147), Custom Internal AI (2059)
+Manufacturing ChatGPT (5581), Claude (2866), Custom Internal AI (2813)
+       Retail ChatGPT (5238), Custom Internal AI (2688), Claude (2646)
+   Technology     ChatGPT (5939), GitHub Copilot (5363), Gemini (3053)
