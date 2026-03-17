@@ -36,6 +36,20 @@ print("\nBoxplot saved to 'plots/revenue_growth_boxplot.png'")
 drop_cols = ['response_id', 'company_id', 'company_founding_year']
 df = df.drop(columns=drop_cols)
 
+# --- Feature Engineering: Derived Ratio Features ---
+# 1. AI Investment Ratio: AI investment relative to annual revenue (revenue is in millions)
+df['ai_investment_ratio'] = df['ai_investment_per_employee'] * df['num_employees'] / (df['annual_revenue_usd_millions'] * 1_000_000)
+
+# 2. Automation Efficiency: Weekly time saved per unit of task automation rate
+# Adding small epsilon to avoid division by zero
+df['automation_efficiency'] = df['time_saved_per_week'] / (df['task_automation_rate'] + 0.001)
+
+# 3. Reskill-Displacement Ratio: Ratio of reskilled employees to displaced jobs
+df['reskill_displacement_ratio'] = df['reskilled_employees'] / (df['jobs_displaced'] + 0.1)
+
+print("\n--- Feature Engineering ---")
+print(f"Added new features: ai_investment_ratio, automation_efficiency, reskill_displacement_ratio")
+
 # Handle Outliers in target variable (revenue_growth_percent) using IQR
 Q1 = df['revenue_growth_percent'].quantile(0.25)
 Q3 = df['revenue_growth_percent'].quantile(0.75)
@@ -57,10 +71,11 @@ target = 'revenue_growth_percent'
 if target in num_cols:
     num_cols.remove(target)
 
-# Handle Categorical variables using LabelEncoding for LightGBM
-le = LabelEncoder()
+# Handle Categorical variables using pandas 'category' type for LightGBM
 for col in cat_cols:
-    df[col] = le.fit_transform(df[col].astype(str))
+    df[col] = df[col].astype('category')
+
+print(f"\nConverted {len(cat_cols)} columns to category type.")
 
 # 5. Split Data
 X = df.drop(columns=[target])
